@@ -7,6 +7,8 @@ let title = document.getElementById('title');
 let description = document.getElementById('description');
 
 let punten = [];
+let partijen = [];
+let antwoorden = [];
 let vraag = 0;
 Main();
 function Main() {
@@ -16,9 +18,11 @@ function Main() {
   button1.onclick = function() {
     Start();
   };
-  for (a = 0; a < subjects[0].parties.length; a++) {
+  for (i = 0; i < subjects[vraag].parties.length; i++) {
     punten.push(0);
+    partijen.push(subjects[vraag].parties[i].name);
   }
+  back.style.display = 'none';
 }
 function verandertitel(titeltekst) {
   title.innerHTML = titeltekst;
@@ -38,45 +42,67 @@ function knoppendisplay(waarde1, waarde2, waarde3, waarde4) {
 function veranderdescriptionText(descriptiontekst) {
   description.innerHTML = descriptiontekst;
 }
-function buttonhandler(statement) {
-  for (k = 0; k < subjects[0].parties.length; k++) {
-    if (subjects[vraag].parties[k].position === statement) {
-      punten[k] += 1;
-    }
-    console.log(punten);
+function Start() {
+  back.style.display = 'block';
+  if (vraag + 1 > subjects.length) {
+    Calculate();
+  } else {
+    verandertitel(subjects[vraag].title);
+    veranderdescriptionText(subjects[vraag].statement);
+    knoppendisplay(
+      'inline-block',
+      'inline-block',
+      'inline-block',
+      'inline-block'
+    );
+    veranderbuttonText(
+      'Eens',
+      'Geen van Beide',
+      'oneens',
+      'sla deze vraag over -->'
+    );
+
+    button1.onclick = function() {
+      ButtonHandler('pro');
+      vraag++;
+      Start();
+    };
+    button2.onclick = function() {
+      ButtonHandler('none');
+      vraag++;
+      Start();
+    };
+    button3.onclick = function() {
+      ButtonHandler('contra');
+      vraag++;
+      Start();
+    };
+    button4.onclick = function() {
+      vraag++;
+      Start();
+    };
   }
 }
-function Start() {
-  verandertitel(subjects[vraag].title);
-  veranderdescriptionText(subjects[vraag].statement);
-  knoppendisplay(
-    'inline-block',
-    'inline-block',
-    'inline-block',
-    'inline-block'
+function Calculate() {
+  verandertitel('Resultaten');
+  veranderdescriptionText(
+    'Hieronder worden de resultaten getoont van de test.'
   );
-  veranderbuttonText(
-    'Eens',
-    'Geen van Beide',
-    'oneens',
-    'sla deze vraag over -->'
-  );
-
-  button1.onclick = function() {
-    buttonhandler('pro');
-    vraag++;
+  knoppendisplay('none', 'none', 'none', 'none');
+  for (o = 0; o < subjects.length; o++) {
+    for (i = 0; i < subjects[o].parties.length; i++) {
+      if (subjects[o].parties[i].position === antwoorden[o]) {
+        punten[i] += 1;
+      }
+    }
+  }
+}
+function ButtonHandler(position) {
+  antwoorden[vraag] = position;
+}
+function Back() {
+  if (vraag > 0) {
+    vraag--;
     Start();
-  };
-  button2.onclick = function() {
-    vraag++;
-    Start();
-  };
-  button3.onclick = function() {
-    vraag++;
-    Start();
-  };
-  button4.onclick = function() {
-    vraag++;
-    Start();
-  };
+  }
 }

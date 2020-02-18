@@ -44,3 +44,18 @@ body {
 .lead {
   height: 100px;
 }
+
+#back {
+  background-color: transparent;
+  color: gray;
+  padding: 0.35em 0.1em;
+  border-radius: 5px;
+  font-size: 24px;
+  line-height: 24px;
+  max-width: 32%;
+  border-color: white;
+  border-style: solid;
+}
+.active {
+  background-color: #018aa9;
+}
