@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stemwijzer</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="img/favicon.png" type="image/gif" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <main class="col-8">
+      <button class="btn btn-primary" id="backButton">
+        <img src="img/icon-arrow-back.svg" />
+      </button>
+
+      <section id="homepage" class="row col-8">
+        <img id="main-logo" src="img/logo-stemwijzer.svg" alt="main logo" />
+
+        <h2>StemWijzer Tweede Kamer</h2>
+        <h6 style="font-size: 20px;">
+          Europese Parlements­­verkiezingen 23 mei 2019
+        </h6>
+        <br />
+        <p class="title" id="title" style="font-size: 20px;">
+          Test uw politieke voorkeur aan de hand van
+        </p>
+        <p class="title" id="questionCount" style="font-size: 20px;"></p>
+        <p class="title" style="font-size: 20px;">stellingen</p>
+
+        <button class="btn btn-primary btn-lg btn-outline-dark" id="start">
+          Start
+        </button>
+      </section>
+
+      <section id="questions" class="row">
+        <h1 id="question"></h1>
+        <p id="statement"></p>
+
+        <article id="openQuestions">
+          <div id="importantCheckbox">
+            <p>Extra belangrijk:</p>
+            <input type="checkbox" id="isImportant" />
+          </div>
+
+          <button class="btn btn-primary options" id="pro">Eens</button>
+          <button class="btn btn-primary options" id="none">
+            Geen van beide
+          </button>
+          <button class="btn btn-primary options" id="contra">Oneens</button>
+          <button class="btn btn-primary options" id="skip">
+            Sla deze vraag over
+            <img id="arrowNext" src="img/icon-backspace-right.svg" />
+          </button>
+        </article>
+
+        <article id="choices">
+          <button class="btn btn-primary options" id="nextPage">
+            Naar resultaat
+          </button>
+
+          <h2>Kies de partijen die u mee wilt nemen in het resultaat</h2>
+
+          <button class="btn btn-primary selection" id="largeParties">
+            Grote partijen
+          </button>
+          <button class="btn btn-primary selection" id="secularParties">
+            Seculiere partijen
+          </button>
+          <button class="btn btn-primary selection" id="noParties">
+            Verwijder selectie
+          </button>
+
+          <ul class="list-group" id="partyList"></ul>
+        </article>
+      </section>
+
+      <section id="results" class="row">
+        <h1 id="resultTitle">Uw mening komt het best over met:</h1>
+        <h2 id="match"></h2>
+        <article>
+          <h2 id="firstPartyElement"></h2>
+          <h2 id="secondPartyElement"></h2>
+          <h2 id="thirdPartyElement"></h2>
+
+          <ul id="otherResults"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

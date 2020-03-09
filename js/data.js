@@ -4227,7 +4227,7 @@ var subjects = [
           'De EU bemoeit zich nu met veel te veel zaken en legt ons allerlei onnodige regels op. Daar moeten we vanaf. Er moet daarom een nieuw Europees verdrag komen. Samenwerken binnen Europa is goed voor onze economie en de aanpak van gezamenlijke problemen op het gebied van milieu en veiligheid, maar we willen geen Europa dat zich bemoeit met onze sociale woningbouw, het grote bedrijfsleven bevoordeelt en ongeremde arbeidsmigratie toestaat.'
       },
       {
-        name: 'Vrijzinnige Partij',
+        name: ' Vrijzinnige Partij',
         position: 'contra',
         opinion:
           'Vrijzinnige Partij kiest voor vrije mensen: mensen moeten vrij kunnen reizen, in een ander land kunnen werken en goederen vrij kunnen kopen binnen Europa. We willen het basisinkomen overal in de EU. Ook is gezamenlijke Europese aanpak van criminaliteit en terrorisme noodzakelijk. Consumentenbescherming kan alleen door Europese aanpak. De Vrijzinnige Partij wil wel veel meer democratisering van EU door afschaffen van Raad van Ministers en betere controle op de Europese Commissie ( zie DiEM 2025)'

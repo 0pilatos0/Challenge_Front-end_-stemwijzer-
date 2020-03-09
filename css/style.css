@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  overflow: auto;
+}
+
+main {
+  background-color: #fff;
+  width: 90%;
+}
+
+main,
+footer {
+  padding: 25px 5%;
+  padding-bottom: 400px;
+  margin: 0px auto;
+}
+
+p {
+  display: inline;
+}
+
+button#backButton {
+  background-color: #e7eaeb;
+  border-color: #e7eaeb;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+section.row {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*Homepage Section*/
+
+section#homepage {
+  display: block;
+  height: 600px;
+}
+
+img#main-logo {
+  margin-top: 50px;
+  height: 56px;
+  width: 331px;
+}
+
+p.title {
+  display: inline;
+  color: #01b4dc;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+button#start {
+  margin-top: 20px;
+  display: block;
+  float: left;
+  min-width: 188px;
+}
+
+/* Question Section */
+
+section#questions {
+  display: none;
+  height: 600px;
+}
+
+h1#question {
+  color: #00b5d8;
+  margin-bottom: 25px;
+}
+
+p#statement {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 25px;
+  min-height: 150px;
+}
+
+button#skip {
+  float: right;
+  background-color: #fff;
+  border-color: #fff;
+  color: #9c9c9c;
+}
+
+div#importantCheckbox {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+div#importantCheckbox > p {
+  display: inline;
+  font-weight: bold;
+}
+
+button.options {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  min-width: 188px;
+  margin-right: 1.33%;
+  margin-bottom: 2.5%;
+}
+
+button.options:hover {
+  background-color: #00b5d8;
+  border-color: #00b5d8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul#partyList {
+  display: inline-block;
+}
+
+ul#partyList > li {
+  display: inline-block;
+  width: 33%;
+}
+
+input {
+  margin-right: 2%;
+  zoom: 1.5;
+}
+
+button.selection {
+  margin: 2% 1%;
+}
+
+/* Result Section*/
+
+section#results {
+  display: none;
+}
+
+h1#resultTitle {
+  color: #000;
+  text-align: center;
+}
+
+h2#match {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+section#results > article {
+  text-align: right;
+  background-color: rgb(243, 243, 243);
+  padding: 20px;
+  padding-right: 60px;
+  border-radius: 100px;
+}
+.small {
+  font-size: 0px;
+}
+#choices {
+  height: 100%;
+}
