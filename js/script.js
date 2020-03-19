@@ -15,7 +15,7 @@ function startQu() {
 
   document.getElementById('questionCount').innerHTML = subjects.length;
   start.addEventListener('click', startQ);
-  values();
+  values(); 
 }
 
 function values() {
